@@ -29,8 +29,8 @@ class AppWindow(ctk.CTk):
         self.sidebar_frame.grid(row=0, column=0, sticky="nsew")
         self.sidebar_frame.grid_rowconfigure(6, weight=1)
 
-        self.logo_label = ctk.CTkLabel(self.sidebar_frame, text="VisualMind AI", font=ctk.CTkFont(size=20, weight="bold"))
-        self.logo_label.grid(row=0, column=0, padx=20, pady=(20, 30))
+        logo_label = ctk.CTkLabel(self.sidebar_frame, text="VisualMind AI", font=ctk.CTkFont(size=20, weight="bold"))
+        logo_label.grid(row=0, column=0, padx=20, pady=(20, 30))
 
         self.btn_import = ctk.CTkButton(self.sidebar_frame, text="Importar Arquivo", command=self.import_document)
         self.btn_import.grid(row=1, column=0, padx=20, pady=10)
@@ -60,8 +60,8 @@ class AppWindow(ctk.CTk):
         self.text_view.grid_columnconfigure(0, weight=1)
         self.text_view.grid_rowconfigure(1, weight=1)
 
-        self.text_label = ctk.CTkLabel(self.text_view, text="Texto de Entrada:", font=ctk.CTkFont(size=14, weight="bold"))
-        self.text_label.grid(row=0, column=0, padx=10, pady=(10, 5), sticky="w")
+        text_label = ctk.CTkLabel(self.text_view, text="Texto de Entrada:", font=ctk.CTkFont(size=14, weight="bold"))
+        text_label.grid(row=0, column=0, padx=10, pady=(10, 5), sticky="w")
 
         self.text_area = ctk.CTkTextbox(self.text_view, wrap="word", corner_radius=8, font=ctk.CTkFont(size=14))
         self.text_area.grid(row=1, column=0, padx=10, pady=(0, 10), sticky="nsew")
@@ -71,8 +71,8 @@ class AppWindow(ctk.CTk):
         self.map_view.grid_columnconfigure(0, weight=1)
         self.map_view.grid_rowconfigure(1, weight=1)
 
-        self.map_label = ctk.CTkLabel(self.map_view, text="Visualização do Mapa Mental:", font=ctk.CTkFont(size=14, weight="bold"))
-        self.map_label.grid(row=0, column=0, padx=10, pady=(10, 5), sticky="w")
+        map_label = ctk.CTkLabel(self.map_view, text="Visualização do Mapa Mental:", font=ctk.CTkFont(size=14, weight="bold"))
+        map_label.grid(row=0, column=0, padx=10, pady=(10, 5), sticky="w")
 
         self.map_container = ctk.CTkFrame(self.map_view, corner_radius=8, fg_color="#242424")
         self.map_container.grid(row=1, column=0, padx=10, pady=(0, 10), sticky="nsew")

@@ -1,5 +1,4 @@
 import PyPDF2
-import os
 
 def extract_text_from_pdf(filepath: str) -> str:
     """
