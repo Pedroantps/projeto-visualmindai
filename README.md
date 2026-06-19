@@ -24,7 +24,7 @@ Siga os passos abaixo para clonar, configurar e executar a aplicação em qualqu
 ### 1. Clonar o Repositório
 Abra o terminal e clone este repositório para a sua máquina local:
 ```bash
-git clone [https://github.com/Pedroantps/projeto-visualmindai.git](https://github.com/Pedroantps/projeto-visualmindai.git)
+git clone [https://github.com/Pedroantps/projeto-visualmindai.git]
 cd visualmind-ai
 ```
 
@@ -49,11 +49,18 @@ pip install -r requirements.txt
 
 ### 4. Configuração de Segurança (Chave da API)
 O projeto utiliza a API da Groq para o processamento de linguagem natural. Para segurança do código-fonte, a chave não está no repositório.
+
+**Como obter a sua chave da Groq (Gratuito):**
+1. Aceda ao [Groq Console](https://console.groq.com/keys).
+2. Crie uma conta ou inicie sessão.
+3. No menu lateral esquerdo, clique em **API Keys**.
+4. Clique no botão **Create API Key**, dê um nome (ex: `VisualMind`) e copie a chave gerada (ela começa com `gsk_`).
+
+**Como configurar no projeto:**
 1. Crie um ficheiro chamado `.env` na raiz do projeto (na mesma pasta deste README).
-2. Adicione a sua chave da API dentro do ficheiro `.env` no seguinte formato:
+2. Cole a chave que acabou de copiar dentro do ficheiro `.env` no seguinte formato:
    ```env
-   GROQ_API_KEY=sua_chave_aqui
-   ```
+   GROQ_API_KEY=gsk_sua_chave_copiada_aqui
 
 ### 5. Executar a Aplicação
 Com tudo configurado, inicie a interface gráfica executando o módulo principal:
